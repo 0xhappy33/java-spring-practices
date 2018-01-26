@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="hello" class="day1.HelloWorld">
+        <property name="message" value="Hello World!"></property>
+    </bean>
+    
+    <bean id="customer1" class="day2.Customer">
+    	<constructor-arg value="Truong Van Ha"></constructor-arg>
+    	<constructor-arg value="21"></constructor-arg>
+    </bean>
+    
+    <bean id="customer2" class="day3.Customer">
+    	<constructor-arg value="8 Nguyen Thong, Da Nang"></constructor-arg>
+    </bean>
+    
+    <bean id="customer3" class="day3.Customer">
+    	<constructor-arg value="3"></constructor-arg>
+    </bean>
+    
+    <bean id="payMent" class="day5.Payment">
+    	<constructor-arg>
+    		<bean class="day5.Order">
+    			<property name="price" value="10"></property>
+    			<property name="checkInDate" value="1/1/2018"></property>
+    			<property name="checkOutDate" value="10/1/2018"></property>
+    			<property name="dayOfInvoice" value="10/1/2018"></property>
+    		</bean>
+    	</constructor-arg>
+    </bean>
+    
+</beans>
