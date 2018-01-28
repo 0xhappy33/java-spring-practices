@@ -8,6 +8,7 @@ public class Customer {
 	private int cmnd;
 	private int gender;
 	private Address address;
+	
 	private Booking booking;
 	
 	public Customer(Address address) {

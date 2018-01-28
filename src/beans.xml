@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 
@@ -21,6 +22,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
     	<constructor-arg value="3"></constructor-arg>
     </bean>
     
+     <!-- for day 5 -->
     <bean id="payMent" class="day5.Payment">
     	<constructor-arg>
     		<bean class="day5.Order">
@@ -31,5 +33,52 @@ http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
     		</bean>
     	</constructor-arg>
     </bean>
+     <!-- for day 5 -->
     
+    <!-- for day 6 -->
+    <bean id="employee1" class="day6.Employee" p:name="Truong Van Ha" p:age="21" p:cmnd="2121128067"/>
+    <bean id="swimmingPool" class="day6.SwimmingPool" p:name="Furama" p:openHour="10" p:employee="employee1" p:employee-ref="employee1"/>
+     <!-- for day 6 -->
+    
+    <!-- for day 7 -->
+    <bean id="furama" class="day7.Resort">
+    	<property name="customerList">
+    		<list>
+    			<value>Truong Van Ha</value>
+    			<value>Linh Ntl</value>
+    			<value>Hoang Quy</value>
+    			<value>Tuan Tuan</value>
+    		</list>
+    	</property>
+    	
+    	<property name="customerSet">
+    		<set>
+    			<value>Truong Van Ha</value>
+    			<value>Linh Ntl</value>
+    			<value>Hoang Quy</value>
+    			<value>Tuan Tuan</value>
+    		</set>
+    	</property>
+    	
+    	<property name="customerMap">
+    		<map>
+    			<entry key="1" value="Truong Van Ha"/>
+    			<entry key="2" value="Linh Ntl"/>
+    			<entry key="3" value="Hoang Quy"/>
+    			<entry key="4" value="Tuan Tuan"/>
+    		</map>
+    	</property>
+    	
+    	<!-- results in a setCustomerProp(java.util.Properties) call -->
+      <property name = "customerProp">
+         <props>
+            <prop key = "one">Linh Ntl</prop>
+            <prop key = "two">Hoang Quy</prop>
+            <prop key = "three">Tuan Tuan</prop>
+            <prop key = "four">Truong Van Ha</prop>
+         </props>
+      </property>
+      
+    </bean>
+    <!-- for day 7 -->
 </beans>

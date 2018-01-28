@@ -7,7 +7,6 @@ public class Customer {
 	private int gender;
 	
 	
-	
 	public Customer() {
 		super();
 	}
