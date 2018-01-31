@@ -8,6 +8,7 @@ import day4.DayFour;
 import day5.DayFive;
 import day6.DaySix;
 import day7.DaySeven;
+import day8.DayEight;
 
 public class Main {
 	public static void main(String[] args) {
@@ -17,8 +18,8 @@ public class Main {
 		/*DayThree dayThree = new DayThree();
 		dayThree.run();*/
 		
-		DayFour dayFour = new DayFour();
-		dayFour.run();
+		//DayFour dayFour = new DayFour();
+		//dayFour.run();
 		
 		/*DayFive dayFive = new DayFive();
 		dayFive.run();*/
@@ -28,5 +29,10 @@ public class Main {
 //		
 /*		DaySeven daySeven = new DaySeven();
 		daySeven.run();*/
+		
+		DayEight dayEight = new DayEight();
+		dayEight.run();
+		
+		
 	}
 }

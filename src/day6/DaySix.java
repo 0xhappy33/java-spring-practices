@@ -4,9 +4,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import day5.Payment;
-import utils.Execute;
+import utils.IExecute;
 
-public class DaySix implements Execute{
+public class DaySix implements IExecute{
 
 	@Override
 	public void run() {

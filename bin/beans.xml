@@ -14,12 +14,23 @@ http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
     	<constructor-arg value="21"></constructor-arg>
     </bean>
     
-    <bean id="customer2" class="day3.Customer">
-    	<constructor-arg value="8 Nguyen Thong, Da Nang"></constructor-arg>
+    <bean id="address1" class="day3.Address">
+    	<constructor-arg value="8 Nguyen THong, Da Nang"></constructor-arg>
     </bean>
     
-    <bean id="customer3" class="day3.Customer">
+    <bean id="customer2" class="day3.Customer">
+    	<constructor-arg ref="address1"></constructor-arg>
+    </bean>
+    
+    <bean id="booking1" class="day4.Booking">
+    	<constructor-arg value="1"></constructor-arg>
     	<constructor-arg value="3"></constructor-arg>
+    	<constructor-arg value="300"></constructor-arg>
+    	<constructor-arg value="3/1/2018"></constructor-arg>
+    </bean>
+    
+    <bean id="customer4" class="day3.Customer">
+    	<property name="booking" ref="booking1"></property>
     </bean>
     
      <!-- for day 5 -->
@@ -81,4 +92,14 @@ http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
       
     </bean>
     <!-- for day 7 -->
+    
+    <!-- for day 8 -->
+    <bean id="vipCustomer" class="day8.VipCustomer">
+    	<property name="name" value="Truong Van Ha"></property>
+    	<property name="money" value="#{500 + 500}"></property>
+    	<property name="isVip" value="#{vipCustomer.money > 1000 ? true : false}"></property>
+    	<property name="address" value="8 Nguyen Thong, Da Nang"></property>
+    	<property name="isDiscount" value="#{vipCustomer.money > 100 || vipCustomer.isVip == true}"></property>
+    	<property name="isValidPhoneNumber" value="#{vipCustomer.isValidPhoneNumber matches '\\d{10}|(?:\\d{3}-){2}\\d{4}|\\(\\d{3}\\)\\d{3}-?\\d{4}'}"></property>
+    </bean>
 </beans>

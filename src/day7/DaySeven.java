@@ -3,9 +3,9 @@ package day7;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import utils.Execute;
+import utils.IExecute;
 
-public class DaySeven implements Execute{
+public class DaySeven implements IExecute{
 
 	@Override
 	public void run() {

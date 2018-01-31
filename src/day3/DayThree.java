@@ -5,9 +5,9 @@ import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
-import utils.Execute;
+import utils.IExecute;
 
-public class DayThree implements Execute{
+public class DayThree implements IExecute{
 
 	@Override
 	public void run() {

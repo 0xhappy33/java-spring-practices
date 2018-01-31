@@ -19,6 +19,8 @@ public class Booking {
 		this.money = money;
 		this.date = date;
 	}
+	
+	
 	@Override
 	public String toString() {
 		return "Booking [id=" + id + ", numberBooking=" + numberBooking + ", money=" + money + ", date=" + date + "]";

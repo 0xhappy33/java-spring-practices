@@ -6,9 +6,9 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 import day3.Customer;
-import utils.Execute;
+import utils.IExecute;
 
-public class DayFour implements Execute{
+public class DayFour implements IExecute{
 
 	@Override
 	public void run() {
@@ -17,7 +17,7 @@ public class DayFour implements Execute{
 		@SuppressWarnings("deprecation")
 		BeanFactory factory = new XmlBeanFactory(r);
 		
-		Customer cus = (Customer) factory.getBean("customer3");
+		Customer cus = (Customer) factory.getBean("customer4");
 		cus.printCustomerAddress();
 	}
 	

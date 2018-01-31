@@ -5,10 +5,10 @@ import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
-import utils.Execute;
+import utils.IExecute;
 
 @SuppressWarnings("deprecation")
-public class DayTwo implements Execute{
+public class DayTwo implements IExecute{
 
 	@Override
 	public void run() {

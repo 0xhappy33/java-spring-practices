@@ -11,20 +11,30 @@ public class Customer {
 	
 	private Booking booking;
 	
+	public Customer() {
+		
+	}
+	public Customer(Booking booking) {
+		this.booking = booking;
+	}
+	
 	public Customer(Address address) {
 		super();
 		this.address = address;
 	}
 
-	public Customer(Booking booking) {
-		super();
-		this.booking = booking;
-	}
-	
 	public Customer(String name, int age) {
 		super();
 		this.name = name;
 		this.age = age;
+	}
+	
+	public Booking getBooking() {
+		return booking;
+	}
+
+	public void setBooking(Booking booking) {
+		this.booking = booking;
 	}
 
 	@Override
